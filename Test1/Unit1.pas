@@ -75,7 +75,7 @@ begin
   jcls     := FJavaEnv.FindClass(strClass);
   if jcls = nil then
   begin
-    ShowMessage('cant find java class');
+    MessageBox(Handle, 'cant find java class', 'Delphi 10.3 µ÷ÓÃ Java Class', MB_OK OR MB_ICONERROR);
     Exit;
   end;
 
