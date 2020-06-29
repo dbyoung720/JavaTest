@@ -1,8 +1,12 @@
 确认一下你是否安装了JAVA，并且系统搜索路径中是否包含 Java 的路径。
 
-默认是(x86)：
+x86(默认位置)：
 C:\Program Files (x86)\Java\jdk1.8.0_202\bin
 C:\Program Files (x86)\Java\jdk1.8.0_202\jre\bin\server
+
+x64(默认位置)：
+C:\Program Files\Java\jdk1.8.0_202\bin
+C:\Program Files\Java\jdk1.8.0_202\jre\bin\server
 
 如果没有，将它们添加到系统搜索路径中。
 再执行DEMO。
