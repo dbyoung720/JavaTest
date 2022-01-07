@@ -79,7 +79,7 @@ end;
 begin
   try
     Test;
-   // Readln;
+    Readln;
   except
     on E: Exception do
     begin

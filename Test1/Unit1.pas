@@ -41,7 +41,7 @@ begin
   ErrCode                    := FJavaVM.LoadVM(VM_args);
   if ErrCode < 0 then
   begin
-    MessageBox(Handle, 'Create Java VM Error', 'Delphi 10.3 调用 Java Class', MB_OK OR MB_ICONERROR);
+    MessageBox(Handle, 'Create Java VM Error', 'Delphi 11 调用 Java Class', MB_OK OR MB_ICONERROR);
     Halt;
     Exit;
   end;
@@ -50,7 +50,7 @@ begin
   FJavaEnv := TJNIEnv.Create(FJavaVM.Env);
   if FJavaEnv = nil then
   begin
-    MessageBox(Handle, 'Create Java Env Error', 'Delphi 10.3 调用 Java Class', MB_OK OR MB_ICONERROR);
+    MessageBox(Handle, 'Create Java Env Error', 'Delphi 11 调用 Java Class', MB_OK OR MB_ICONERROR);
     Exit;
   end;
 end;
@@ -75,7 +75,7 @@ begin
   jcls     := FJavaEnv.FindClass(strClass);
   if jcls = nil then
   begin
-    MessageBox(Handle, 'cant find java class', 'Delphi 10.3 调用 Java Class', MB_OK OR MB_ICONERROR);
+    MessageBox(Handle, 'cant find java class', 'Delphi 11 调用 Java Class', MB_OK OR MB_ICONERROR);
     Exit;
   end;
 
@@ -88,7 +88,7 @@ begin
   strResult := CallMethod(FJavaEnv, jcls, strMetod, strSign, [strArg], True);
   if strResult <> '' then
   begin
-    MessageBox(Handle, PChar(Format('JavaClassForDelphiTest.goTest  Result: %s', [strResult])), 'Delphi 10.3 调用 Java Class', MB_OK OR MB_ICONINFORMATION);
+    MessageBox(Handle, PChar(Format('JavaClassForDelphiTest.goTest  Result: %s', [strResult])), 'Delphi 11 调用 Java Class', MB_OK OR MB_ICONINFORMATION);
   end;
 end;
 
