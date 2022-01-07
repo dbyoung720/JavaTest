@@ -61,7 +61,7 @@ begin
 
       { 输入 Java 函数的参数类型、参数 }
       stringClass := jEnv.FindClass('java/lang/String');
-      jstr        := jEnv.NewStringUTF(' from Delphi 10.3');
+      jstr        := jEnv.NewStringUTF(' from Delphi 11');
       args        := jEnv.NewObjectArray(1, stringClass, jstr);
 
       { 执行 Java 函数 }
