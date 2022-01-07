@@ -24,7 +24,7 @@ var
   mid        : JMethodID;
 begin
   { ´´½¨ Java ÐéÄâ»ú }
-  jVM := TJavaVM.Create(JNI_VERSION_1_2);
+  jVM := TJavaVM.Create(JNI_VERSION_1_8, ExtractFilePath(ParamStr(0)) + 'jre1.8.0_202\bin\client\jvm.dll');
   try
     Options[0].optionString    := '-Djava.class.path=.';
     VM_args.version            := JNI_VERSION_1_2;
@@ -79,7 +79,7 @@ end;
 begin
   try
     Test;
-    Readln;
+   // Readln;
   except
     on E: Exception do
     begin

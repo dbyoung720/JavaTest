@@ -32,7 +32,7 @@ var
   ErrCode: Integer;
 begin
   { ´´½¨ Java ÐéÄâ»ú }
-  FJavaVM                    := TJavaVM.Create(JNI_VERSION_1_8);
+  FJavaVM                    := TJavaVM.Create(JNI_VERSION_1_8, ExtractFilePath(ParamStr(0)) + 'jre1.8.0_202\bin\client\jvm.dll');
   Options[0].optionString    := PAnsiChar(AnsiString('-Djava.class.path=' + ExtractFilePath(ParamStr(0)) + 'classes'));
   VM_args.version            := JNI_VERSION_1_8;
   VM_args.Options            := @Options;
